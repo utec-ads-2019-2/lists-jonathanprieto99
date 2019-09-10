@@ -15,9 +15,9 @@ void Tester::execute() {
 template <typename T>
 List<T>* Tester::getCollection(Collection collection) {
     switch (collection) {
-        case forward_list: return new ForwardList<T>();
+        //case forward_list: return new ForwardList<T>();
         case linked_list: return new LinkedList<T>();
-        case circular_list: return new CircularLinkedList<T>();
+        //case circular_list: return new CircularLinkedList<T>();
         default: throw invalid_argument("Not a valid collection - build");
     }
 }
@@ -25,9 +25,9 @@ List<T>* Tester::getCollection(Collection collection) {
 template <typename T>
 void Tester::testSpecifics(Collection collection, List<T>* list) {
     switch (collection) {
-        case forward_list: testForward((ForwardList<T>*) list); break;
+        //case forward_list: testForward((ForwardList<T>*) list); break;
         case linked_list: testLinked((LinkedList<T>*) list); break;
-        case circular_list: testCircularLinked((CircularLinkedList<T>*) list); break;
+        //case circular_list: testCircularLinked((CircularLinkedList<T>*) list); break;
         default: throw invalid_argument("Not a valid collection - specifics");
     }
 }
@@ -152,6 +152,7 @@ void Tester::testLinked(LinkedList<T>* list) {
 }
 
 template <typename T>
+/*
 void Tester::testCircularLinked(CircularLinkedList<T>* list) {
     Mocker mocker;
     unsigned int size = mocker.generateRandomInt(5);
@@ -183,4 +184,5 @@ void Tester::testCircularLinked(CircularLinkedList<T>* list) {
     --it;
     --it;
     ASSERT(*it == elements[4], "The " + list->name() + " iterator is not working");
+    */
 }

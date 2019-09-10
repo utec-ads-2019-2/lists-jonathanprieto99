@@ -2,15 +2,22 @@
 #define LIST_H
 
 #include "node.h"
+#include <string>
+
+using namespace std;
 
 template <typename T>
 class List {
     protected:
+        //Puntero al primer elemento de la lista
         Node<T>* head;
+        //Puntoero al ultimo elemento de la lista
         Node<T>* tail;
+        //Nodos de la lista
         int nodes;
 
     public:
+    //Se inicializa las variables poniendo punteros vacios, y diciendo que node es 0.
         List() : head(nullptr), tail(nullptr), nodes(0) {};
 
         virtual T front() = 0;
