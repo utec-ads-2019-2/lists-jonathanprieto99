@@ -1,7 +1,7 @@
 #include "tester.h"
 
 void Tester::execute() {
-    Collection collections[] = { forward_list, linked_list, circular_list };
+    Collection collections[] = {  linked_list };
     size_t numberOfCollections = sizeof(collections) / sizeof(collections[0]);
 
     for (int i = 0; i < numberOfCollections; i++) {
@@ -100,7 +100,7 @@ void Tester::print(List<T>* list) {
 
     cout << endl;
 }
-
+/*
 template <typename T>
 void Tester::testForward(ForwardList<T>* list) {
     Mocker mocker;
@@ -124,7 +124,7 @@ void Tester::testForward(ForwardList<T>* list) {
     ++it;
     ASSERT(it != list->end(), "The " + list->name() + " iterator is not working");
 }
-
+*/
 template <typename T>
 void Tester::testLinked(LinkedList<T>* list) {
     Mocker mocker;
@@ -150,9 +150,9 @@ void Tester::testLinked(LinkedList<T>* list) {
     ASSERT(*it == elements[2], "The " + list->name() + " iterator is not working");
     ASSERT(it != list->end(), "The " + list->name() + " iterator is not working");
 }
-
-template <typename T>
 /*
+template <typename T>
+
 void Tester::testCircularLinked(CircularLinkedList<T>* list) {
     Mocker mocker;
     unsigned int size = mocker.generateRandomInt(5);
@@ -184,5 +184,7 @@ void Tester::testCircularLinked(CircularLinkedList<T>* list) {
     --it;
     --it;
     ASSERT(*it == elements[4], "The " + list->name() + " iterator is not working");
-    */
+
 }
+
+ */

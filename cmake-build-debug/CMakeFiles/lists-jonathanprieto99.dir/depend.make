@@ -13,6 +13,9 @@ CMakeFiles/lists-jonathanprieto99.dir/main.cpp.o: ../mock/mocker.h
 CMakeFiles/lists-jonathanprieto99.dir/main.cpp.o: ../node.h
 CMakeFiles/lists-jonathanprieto99.dir/main.cpp.o: ../test/tester.h
 
+CMakeFiles/lists-jonathanprieto99.dir/mock/mocker.cpp.o: ../mock/mocker.cpp
+CMakeFiles/lists-jonathanprieto99.dir/mock/mocker.cpp.o: ../mock/mocker.h
+
 CMakeFiles/lists-jonathanprieto99.dir/test/tester.cpp.o: ../circular.h
 CMakeFiles/lists-jonathanprieto99.dir/test/tester.cpp.o: ../forward.h
 CMakeFiles/lists-jonathanprieto99.dir/test/tester.cpp.o: ../iterator.h

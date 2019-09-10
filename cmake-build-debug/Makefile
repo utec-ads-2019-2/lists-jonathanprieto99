@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/lists-jonathanprieto99.dir/build.make CMakeFiles/lists-jonathanprieto99.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mock/mocker.o: mock/mocker.cpp.o
+
+.PHONY : mock/mocker.o
+
+# target to build an object file
+mock/mocker.cpp.o:
+	$(MAKE) -f CMakeFiles/lists-jonathanprieto99.dir/build.make CMakeFiles/lists-jonathanprieto99.dir/mock/mocker.cpp.o
+.PHONY : mock/mocker.cpp.o
+
+mock/mocker.i: mock/mocker.cpp.i
+
+.PHONY : mock/mocker.i
+
+# target to preprocess a source file
+mock/mocker.cpp.i:
+	$(MAKE) -f CMakeFiles/lists-jonathanprieto99.dir/build.make CMakeFiles/lists-jonathanprieto99.dir/mock/mocker.cpp.i
+.PHONY : mock/mocker.cpp.i
+
+mock/mocker.s: mock/mocker.cpp.s
+
+.PHONY : mock/mocker.s
+
+# target to generate assembly for a file
+mock/mocker.cpp.s:
+	$(MAKE) -f CMakeFiles/lists-jonathanprieto99.dir/build.make CMakeFiles/lists-jonathanprieto99.dir/mock/mocker.cpp.s
+.PHONY : mock/mocker.cpp.s
+
 test/tester.o: test/tester.cpp.o
 
 .PHONY : test/tester.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mock/mocker.o"
+	@echo "... mock/mocker.i"
+	@echo "... mock/mocker.s"
 	@echo "... test/tester.o"
 	@echo "... test/tester.i"
 	@echo "... test/tester.s"

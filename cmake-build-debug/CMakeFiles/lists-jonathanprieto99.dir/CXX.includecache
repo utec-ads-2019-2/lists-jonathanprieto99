@@ -31,6 +31,12 @@ node.h
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/linked.h
 list.h
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/list.h
+string
+-
+algorithm
+-
+vector
+-
 iterators/bidirectional_iterator.h
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/iterators/bidirectional_iterator.h
 
@@ -39,6 +45,12 @@ node.h
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/node.h
 string
 -
+
+/Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/main.cpp
+iostream
+-
+test/tester.h
+/Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/test/tester.h
 
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/mock/mocker.h
 random
