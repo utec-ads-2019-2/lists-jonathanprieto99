@@ -24,35 +24,85 @@ class ForwardList : public List<T> {
         }
 
         void push_front(T value) {
-            // TODO
+                auto *temporal = new Node<T>;
+                if(empty()){//ES IGUAL A empty()==true
+                        this->head=nullptr;
+                        this->tail=nullptr;
+                }
+                else{
+                        temporal->next=this->head;
+                        this->head=temporal;
+                }
+                temporal->data=value;
+                ++this->nodes;
         }
 
         void push_back(T value) {
-            // TODO
+                auto *temporal = new Node<T>;
+                if(empty()){//ES IGUAL A empty()==true
+                        this->head=nullptr;
+                        this->tail=nullptr;
+                }
+                else{
+                        this->tail-> next= temporal;
+                }
+                this->tail=temporal;
+                temporal->data=value;
+                temporal -> next = nullptr;
+                ++this->nodes;
         }
 
         void pop_front() {
-            // TODO
+                if (!empty())
+                {
+                        auto *temporal = this->head->next;
+                        delete this->head;
+                        this->head = temporal;
+                        this->nodes--;
+                }
         }
 
         void pop_back() {
-            // TODO
+                if ( empty() ) { throw runtime_error("Empty list!"); }
+                else
+                {
+                        auto *temporal = this->head;
+                        while (temporal->next!=this->tail)
+                        {
+                                temporal=temporal->next;
+                        }
+                        this->tail = temporal;
+                        delete this->tail;
+                        this->tail->next = nullptr;
+                        this->nodes--;
+                }
         }
 
         T operator[](int index) {
-            // TODO
+                if (index > size())
+                        throw runtime_error("Empty list!");
+                auto *temporal = this->head;
+                int i=0;
+                while(i<index)
+                {
+                        temporal=temporal->next ;
+                        i++;
+                }
+                return temporal->data ;
         }
 
         bool empty() {
-            // TODO
+                return (this -> nodes == 0);
         }
 
         int size() {
-            // TODO
+                return this->nodes;
         }
 
         void clear() {
-            // TODO
+                this->head->killSelf(0);
+                this->head = nullptr;
+                this->tail = nullptr;
         }
 
         void sort() {
@@ -68,15 +118,28 @@ class ForwardList : public List<T> {
         }
 
         ForwardIterator<T> begin() {
-            // TODO
+                return ForwardIterator<T> (this->head);
         }
 
 	    ForwardIterator<T> end() {
-            // TODO
+                return ForwardIterator<T> (NULL);
         }
 
         void merge(ForwardList<T> list) {
-            // TODO
+                if (list.empty())
+                {
+                        throw runtime_error("Empty list!");
+                }
+                if (this->nodes==0)
+                {
+                        this->head = list.head;
+                }
+                else
+                {
+                        this->head->next = list.tail;
+                }
+                this->tail = list.tail;
+                this->nodes += list.nodes;
         }
 };
 

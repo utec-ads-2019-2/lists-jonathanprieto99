@@ -28,7 +28,7 @@ class LinkedList : public List<T> {
         }
 
         void push_front(T value) {
-            Node<T> *temporal = new Node<T>;
+            auto *temporal = new Node<T>;
                 if(empty()){//ES IGUAL A empty()==true
                     this->head=nullptr;
                     this->tail=nullptr;
@@ -42,7 +42,7 @@ class LinkedList : public List<T> {
         }
 
         void push_back(T value) {
-            Node<T> *temporal = new Node<T>;
+            auto *temporal = new Node<T>;
                 if(empty()){
                     this->head=nullptr;
                     this->tail=nullptr;
@@ -93,7 +93,7 @@ class LinkedList : public List<T> {
 
         bool empty() {
                 //Te retorna true si no hay nada en el head
-            return (this -> nodes == 0 ? true:false);
+            return (this -> nodes == 0);
         }
 
         int size() {
@@ -132,7 +132,7 @@ class LinkedList : public List<T> {
             }
             Node<T> *Nodoprevio = NULL;
             Node<T> *Nodeactual = this->head;
-            Node<T> *temporal = new Node<T>();
+            auto *temporal = new Node<T>();
             for (int i = 0; i < size(); i++)
             {
                 temporal = Nodeactual -> next;

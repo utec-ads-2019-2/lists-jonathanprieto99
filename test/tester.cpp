@@ -100,7 +100,7 @@ void Tester::print(List<T>* list) {
 
     cout << endl;
 }
-/*
+
 template <typename T>
 void Tester::testForward(ForwardList<T>* list) {
     Mocker mocker;
@@ -124,7 +124,7 @@ void Tester::testForward(ForwardList<T>* list) {
     ++it;
     ASSERT(it != list->end(), "The " + list->name() + " iterator is not working");
 }
-*/
+
 template <typename T>
 void Tester::testLinked(LinkedList<T>* list) {
     Mocker mocker;

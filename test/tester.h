@@ -46,8 +46,8 @@ class Tester {
         template <typename T>
         static void testSpecifics(Collection, List<T>*);
 
-       // template <typename T>
-       // static void testForward(ForwardList<T>*);
+        template <typename T>
+        static void testForward(ForwardList<T>*);
 
         template <typename T>
         static void testLinked(LinkedList<T>*);
