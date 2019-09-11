@@ -10,11 +10,17 @@ class ForwardList : public List<T> {
         ForwardList() : List<T>() {}
 
         T front() {
-            // TODO
+                if ( empty() ) {
+                        throw runtime_error("Empty list!");
+                }
+                return this->head->data;
         }
 
         T back() {
-            // TODO
+                if ( empty() ) {
+                        throw runtime_error("Empty list!");
+                }
+                return this->tail->data;
         }
 
         void push_front(T value) {
