@@ -58,7 +58,7 @@ class ForwardList : public List<T> {
                         auto *temporal = this->head->next;
                         delete this->head;
                         this->head = temporal;
-                        this->nodes--;
+                        --this->nodes;
                 }
         }
 
@@ -74,7 +74,7 @@ class ForwardList : public List<T> {
                         this->tail = temporal;
                         delete this->tail;
                         this->tail->next = nullptr;
-                        this->nodes--;
+                        --this->nodes;
                 }
         }
 
@@ -106,11 +106,43 @@ class ForwardList : public List<T> {
         }
 
         void sort() {
-            // TODO
+                Node<T> *listaorigin = this->head;
+                T* array = new T[this->nodes];
+
+                for(int i = 0; i< size(); i++)
+                {
+                        array[i]=listaorigin -> data;
+                        listaorigin = listaorigin -> next;
+                }
+                int n = sizeof(array)/sizeof(array[0]);
+                std::sort(array, array+n);
+                listaorigin=this -> head;
+
+                for (int i = 0; i < size(); i++)
+                {
+                        listaorigin-> data = array[i];
+                        listaorigin = listaorigin -> next;
+                }
+
+                delete[] array;
         }
     
         void reverse() {
-            // TODO
+                if (size() <= 1) {
+                        return;
+                }
+                else{
+                        Node<T> *Nodoprevio = NULL;
+                        Node<T> *Nodeactual = this->head;
+                        Node<T> *temporal = NULL;
+                        for (int i = 0; i < size(); i++)
+                        {
+                                temporal = Nodeactual->next;
+                                Nodeactual -> next= Nodoprevio;
+                                Nodoprevio= Nodeactual;
+                                Nodeactual = temporal;
+                        }
+                }
         }
 
         string name() {
@@ -128,11 +160,8 @@ class ForwardList : public List<T> {
         void merge(ForwardList<T> list) {
                 if (list.empty())
                 {
-                        throw runtime_error("Empty list!");
-                }
-                if (this->nodes==0)
-                {
                         this->head = list.head;
+                        throw runtime_error("Empty list!");
                 }
                 else
                 {

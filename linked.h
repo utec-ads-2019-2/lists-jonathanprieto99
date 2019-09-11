@@ -4,8 +4,10 @@
 #include "list.h"
 #include <string>
 #include <algorithm>
-#include <vector>
+#include <iostream>
 #include "iterators/bidirectional_iterator.h"
+
+using namespace std;
 
 template <typename T>
 class LinkedList : public List<T> {
@@ -29,9 +31,9 @@ class LinkedList : public List<T> {
 
         void push_front(T value) {
             auto *temporal = new Node<T>;
-                if(empty()){//ES IGUAL A empty()==true
-                    this->head=nullptr;
-                    this->tail=nullptr;
+                if(this->nodes==0){
+                    this->head=temporal;
+                    this->tail=temporal;
                 }
                 else{
                     temporal->next=this->head;
@@ -43,9 +45,9 @@ class LinkedList : public List<T> {
 
         void push_back(T value) {
             auto *temporal = new Node<T>;
-                if(empty()){
-                    this->head=nullptr;
-                    this->tail=nullptr;
+                if(this->nodes==0){
+                    this->head=temporal;
+                    this->tail=temporal;
                 }
                 else{
                     temporal->prev=this->tail;
@@ -69,7 +71,7 @@ class LinkedList : public List<T> {
         }
 
         void pop_back() {
-                if(empty()){
+                if(this->nodes==0){
                         this->head=nullptr;
                         this->tail=nullptr;
                 }
@@ -83,8 +85,9 @@ class LinkedList : public List<T> {
         }
 
     T operator[](int index) {
-        if (index >= size())
+        if (index > size()){
             throw;
+        }
         Node<T> *temporal = this->head;
         for (int i = 0; i < index; i++)
             temporal = temporal->next ;
@@ -108,40 +111,42 @@ class LinkedList : public List<T> {
         }
 
         void sort() {
-            Node<T> *temporal = this->head;
-            vector<T> temporal_content(size());
+            Node<T> *listaorigin = this->head;
+            T* array = new T[this->nodes];
+
             for(int i = 0; i< size(); i++)
             {
-                temporal_content[i]=temporal -> data;
-                temporal = temporal -> next;
+                array[i]=listaorigin -> data;
+                listaorigin = listaorigin -> next;
             }
-            std::sort(temporal_content.begin(), temporal_content.end());
-            temporal= this -> head;
+            int n = sizeof(array)/sizeof(array[0]);
+            std::sort(array, array+n);
+            listaorigin=this -> head;
+
             for (int i = 0; i < size(); i++)
             {
-                temporal-> data = temporal_content[i];
-                temporal = temporal -> next;
+                listaorigin-> data = array[i];
+                listaorigin = listaorigin -> next;
             }
-            temporal_content.erase(temporal_content.begin(), temporal_content.end());
+
+            delete[] array;
         }
     
         void reverse() {
-            //Solo hay un elemento o menos en la lista
             if (size() <= 1) {
                 return;
             }
             Node<T> *Nodoprevio = NULL;
             Node<T> *Nodeactual = this->head;
-            auto *temporal = new Node<T>();
+            Node<T> *temporal = NULL;
             for (int i = 0; i < size(); i++)
             {
-                temporal = Nodeactual -> next;
+                temporal = Nodeactual->next;
                 Nodeactual -> next = Nodoprevio;
                 Nodeactual -> prev = temporal;
                 Nodoprevio = Nodeactual;
                 Nodeactual = temporal;
             }
-            std::swap(this->head, this->tail);
         }
 
         string name() {

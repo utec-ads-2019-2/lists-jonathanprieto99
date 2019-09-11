@@ -11,7 +11,7 @@ struct Node {
     Node<T>* prev;
 
     void killSelf(int count) {
-        if (count > 1) next->killSelf(count-1);
+        if (count > 1) prev->killSelf(count+1);
         delete this;
     }
 };
