@@ -150,7 +150,7 @@ void Tester::testLinked(LinkedList<T>* list) {
     ASSERT(*it == elements[2], "The " + list->name() + " iterator is not working");
     ASSERT(it != list->end(), "The " + list->name() + " iterator is not working");
 }
-/*
+
 template <typename T>
 
 void Tester::testCircularLinked(CircularLinkedList<T>* list) {
@@ -187,4 +187,3 @@ void Tester::testCircularLinked(CircularLinkedList<T>* list) {
 
 }
 
- */

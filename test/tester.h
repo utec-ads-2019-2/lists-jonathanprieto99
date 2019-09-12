@@ -52,8 +52,8 @@ class Tester {
         template <typename T>
         static void testLinked(LinkedList<T>*);
 
-       // template <typename T>
-        //static void testCircularLinked(CircularLinkedList<T>*);
+        template <typename T>
+        static void testCircularLinked(CircularLinkedList<T>*);
 
     public:
         static void execute();

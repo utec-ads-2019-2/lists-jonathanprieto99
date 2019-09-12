@@ -9,11 +9,18 @@ class CircularLinkedList : public List<T> {
         CircularLinkedList() : List<T>() {}
 
         T front() {
-            // TODO
+                if ( empty() ) {
+                        throw runtime_error("TimeOut");
+                }
+                //This permite acceder a los elementos de la clase lista, la segunda flecha permite acceder a los elementos de head en este caso data.
+                return this->head->data;
         }
 
         T back() {
-            // TODO
+                if ( empty() ) {
+                        throw runtime_error("TimeOut");
+                }
+                return this->tail->data;
         }
 
         void push_front(T value) {
