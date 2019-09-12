@@ -16,7 +16,7 @@ class LinkedList : public List<T> {
 
         T front() {
             if ( empty() ) {
-                throw;
+                throw runtime_error("TimeOut");
             }
                 //This permite acceder a los elementos de la clase lista, la segunda flecha permite acceder a los elementos de head en este caso data.
                 return this->head->data;
@@ -24,7 +24,7 @@ class LinkedList : public List<T> {
 
         T back() {
             if ( empty() ) {
-                throw;
+                throw runtime_error("TimeOut");
             }
                 return this->tail->data;
         }
@@ -37,6 +37,7 @@ class LinkedList : public List<T> {
                 }
                 else{
                     temporal->next=this->head;
+                    this->head->prev=temporal;
                     this->head=temporal;
                 }
             temporal->data=value;
@@ -51,6 +52,8 @@ class LinkedList : public List<T> {
                 }
                 else{
                     temporal->prev=this->tail;
+                    this->tail->next=temporal;
+                    this->tail=temporal;
                 }
             temporal->data=value;
             temporal->next= nullptr;
@@ -64,8 +67,10 @@ class LinkedList : public List<T> {
                 }
                 else{
                     Node<T> *temporal = this->head;
-                    this->head=this->head->next;
-                    delete temporal;
+                    temporal=temporal->next;
+                    delete this->head;
+                    this->head=temporal;
+                    this->head->prev= nullptr;
                     --this->nodes;
                 }
         }
@@ -105,23 +110,23 @@ class LinkedList : public List<T> {
 
         void clear() {
             this->head->killSelf(this->nodes);
-            this->nodes=0;
             this->head = nullptr;
             this->tail = nullptr;
+            this->nodes=0;
         }
 
         void sort() {
             Node<T> *listaorigin = this->head;
             T* array = new T[this->nodes];
 
-            for(int i = 0; i< size(); i++)
+            for(int i = 0; i< this->nodes; i++)
             {
                 array[i]=listaorigin -> data;
                 listaorigin = listaorigin -> next;
             }
-            int n = sizeof(array)/sizeof(array[0]);
-            std::sort(array, array+n);
-            listaorigin=this -> head;
+            //Se le pasa donde empieza y termina el array
+            std::sort(array, array+this->nodes);
+            listaorigin=this->head;
 
             for (int i = 0; i < size(); i++)
             {
@@ -136,17 +141,17 @@ class LinkedList : public List<T> {
             if (size() <= 1) {
                 return;
             }
-            Node<T> *Nodoprevio = NULL;
             Node<T> *Nodeactual = this->head;
             Node<T> *temporal = NULL;
-            for (int i = 0; i < size(); i++)
+            while(Nodeactual!= nullptr)
             {
                 temporal = Nodeactual->next;
-                Nodeactual -> next = Nodoprevio;
+                Nodeactual -> next = Nodeactual->prev;
                 Nodeactual -> prev = temporal;
-                Nodoprevio = Nodeactual;
+
                 Nodeactual = temporal;
             }
+            swap(this->head,this->tail);
         }
 
         string name() {
