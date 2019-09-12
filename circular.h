@@ -24,11 +24,41 @@ class CircularLinkedList : public List<T> {
         }
 
         void push_front(T value) {
-            // TODO
+                auto *temporal = new Node<T>;
+                if(this->nodes==0){
+                        temporal->next = temporal;
+                        temporal->prev = temporal;
+                        this->head=temporal;
+                        this->tail=this->head;
+                }
+                else{
+                        temporal->next=this->head;
+                        this->head->prev=temporal;
+                        this->head=temporal;
+                        this->head->prev = this->tail;
+                        this->tail->next = this->head;
+                }
+                temporal->data=value;
+                ++this->nodes;
         }
 
         void push_back(T value) {
-            // TODO
+                auto *temporal = new Node<T>;
+                if(this->nodes==0){
+                        temporal->next = temporal;
+                        temporal->prev = temporal;
+                        this->head=temporal;
+                        this->tail=this->head;
+                }
+                else{
+                        temporal->prev=this->tail;
+                        this->tail->next=temporal;
+                        this->tail=temporal;
+                        this->head->prev = this->tail;
+                        this->tail->next = this->head;
+                }
+                temporal->data=value;
+                ++this->nodes;
         }
 
         void pop_front() {
