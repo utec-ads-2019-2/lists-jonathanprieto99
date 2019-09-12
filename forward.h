@@ -100,9 +100,10 @@ class ForwardList : public List<T> {
         }
 
         void clear() {
-                this->head->killSelf(0);
+                this->head->killSelf(this->nodes);
                 this->head = nullptr;
                 this->tail = nullptr;
+                this->nodes=0;
         }
 
         void sort() {
