@@ -9,6 +9,12 @@
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/circular.h
 list.h
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/list.h
+iterators/bidirectional_iterator.h
+/Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/iterators/bidirectional_iterator.h
+algorithm
+-
+iostream
+-
 
 /Users/jonathanprieto/Documents/GitHub/lists-jonathanprieto99/forward.h
 list.h

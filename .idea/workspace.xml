@@ -42,7 +42,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4e6cc2-774e-4d49-9d2c-cc7b371f6ba1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/circular.h" beforeDir="false" afterPath="$PROJECT_DIR$/circular.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lists-jonathanprieto99.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lists-jonathanprieto99.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lists-jonathanprieto99" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lists-jonathanprieto99" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forward.h" beforeDir="false" afterPath="$PROJECT_DIR$/forward.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linked.h" beforeDir="false" afterPath="$PROJECT_DIR$/linked.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,28 +71,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="algorithm" value="1" />
-          <entry key="cpp" value="3" />
-          <entry key="h" value="17" />
+          <entry key="cpp" value="7" />
+          <entry key="h" value="23" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="21" />
+          <entry key="ObjectiveC" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="32" />
-          <entry key="h" value="2745" />
+          <entry key="h" value="2902" />
           <entry key="txt" value="240" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="48" />
-          <entry key="ObjectiveC" value="2777" />
+          <entry key="ObjectiveC" value="2934" />
           <entry key="PLAIN_TEXT" value="192" />
         </counts>
       </usages-collector>
@@ -95,11 +100,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forward.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1395">
-              <caret line="93" column="22" lean-forward="true" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
+            <state relative-caret-position="359">
+              <caret line="174" column="6" lean-forward="true" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="6" />
               <folding>
                 <element signature="e#37#54#0" expanded="true" />
               </folding>
@@ -110,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linked.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="98" column="31" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="98" selection-end-column="31" />
+            <state relative-caret-position="134">
+              <caret line="170" column="16" lean-forward="true" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="23" />
               <folding>
                 <element signature="e#35#52#0" expanded="true" />
               </folding>
@@ -119,35 +124,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/circular.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/tester.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="154" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="345">
+              <caret line="190" column="6" lean-forward="true" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="6" />
               <folding>
-                <element signature="e#3700#3712#0" expanded="true" />
-                <element signature="e#5302#5314#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding>
-                <element signature="e#40#52#0" expanded="true" />
+                <element signature="e#38#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,12 +155,12 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/iterators/forward_iterator.h" />
         <option value="$PROJECT_DIR$/iterators/bidirectional_iterator.h" />
-        <option value="$PROJECT_DIR$/linked.h" />
         <option value="$PROJECT_DIR$/node.h" />
-        <option value="$PROJECT_DIR$/forward.h" />
         <option value="$PROJECT_DIR$/test/tester.cpp" />
         <option value="$PROJECT_DIR$/test/tester.h" />
         <option value="$PROJECT_DIR$/circular.h" />
+        <option value="$PROJECT_DIR$/linked.h" />
+        <option value="$PROJECT_DIR$/forward.h" />
       </list>
     </option>
   </component>
@@ -205,6 +188,21 @@
             <path>
               <item name="lists-jonathanprieto99" type="b2602c69:ProjectViewProjectNode" />
               <item name="lists-jonathanprieto99" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lists-jonathanprieto99" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lists-jonathanprieto99" type="462c0819:PsiDirectoryNode" />
+              <item name="iterators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lists-jonathanprieto99" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lists-jonathanprieto99" type="462c0819:PsiDirectoryNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lists-jonathanprieto99" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lists-jonathanprieto99" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -259,7 +257,7 @@
       <updated>1567638921234</updated>
       <workItem from="1567638923179" duration="9177000" />
       <workItem from="1568000112405" duration="12306000" />
-      <workItem from="1568118152320" duration="22426000" />
+      <workItem from="1568118152320" duration="24290000" />
     </task>
     <task id="LOCAL-00001" summary="lunes">
       <created>1568075595601</created>
@@ -324,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568289403401</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Jueves Manana">
+      <created>1568290018476</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568290018476</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43909000" />
+    <option name="totallyTimeSpent" value="45773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="827" extended-state="0" />
@@ -376,13 +381,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Jueves Manana" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iterators/bidirectional_iterator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -396,9 +394,6 @@
           <caret line="4125" column="89" selection-start-line="4125" selection-start-column="89" selection-end-line="4125" selection-end-column="89" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/mocker.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/iterators/forward_iterator.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -427,15 +422,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forward.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="93" column="22" lean-forward="true" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
-          <folding>
-            <element signature="e#37#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/iterator.h">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/node.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -447,12 +435,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iterator.h">
+    <entry file="file://$PROJECT_DIR$/iterators/bidirectional_iterator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/mocker.cpp">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/mocker.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tester.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="164" column="34" lean-forward="true" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="34" />
+          <folding>
+            <element signature="e#5302#5314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/tester.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="279">
           <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
           <folding>
             <element signature="e#1113#1125#0" expanded="true" />
@@ -461,31 +469,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/tester.cpp">
+    <entry file="file://$PROJECT_DIR$/circular.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="345">
+          <caret line="190" column="6" lean-forward="true" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="6" />
           <folding>
-            <element signature="e#3700#3712#0" expanded="true" />
-            <element signature="e#5302#5314#0" expanded="true" />
+            <element signature="e#38#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/linked.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="98" column="31" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="98" selection-end-column="31" />
+        <state relative-caret-position="134">
+          <caret line="170" column="16" lean-forward="true" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="23" />
           <folding>
             <element signature="e#35#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/circular.h">
+    <entry file="file://$PROJECT_DIR$/forward.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+        <state relative-caret-position="359">
+          <caret line="174" column="6" lean-forward="true" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="6" />
+          <folding>
+            <element signature="e#37#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -176,9 +176,9 @@ class LinkedList : public List<T> {
             {
                 this->tail->next = list.head;
                 list.head->prev = this->tail;
+                this->tail = list.tail;
             }
-            this->tail = list.tail;
-            this->nodes += list.nodes;
+            this->nodes = this->nodes + list.nodes;
         }
 };
 

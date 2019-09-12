@@ -161,15 +161,14 @@ class ForwardList : public List<T> {
         void merge(ForwardList<T> list) {
                 if (list.empty())
                 {
-                        this->head = list.head;
-                        throw runtime_error("Empty list!");
+                        return;
                 }
                 else
                 {
-                        this->head->next = list.tail;
+                        this->tail->next = list.head;
+                        this->tail = list.tail;
                 }
-                this->tail = list.tail;
-                this->nodes += list.nodes;
+                this->nodes= this->nodes+list.nodes;
         }
 };
 

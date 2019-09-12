@@ -1,7 +1,12 @@
 #ifndef CIRCULAR_H
 #define CIRCULAR_H
-
 #include "list.h"
+#include "iterators/bidirectional_iterator.h"
+
+#include <algorithm>
+#include <iostream>
+
+using namespace std;
 
 template <typename T>
 class CircularLinkedList : public List<T> {
@@ -117,11 +122,41 @@ class CircularLinkedList : public List<T> {
         }
 
         void sort() {
-            // TODO
+            Node<T> *listaorigin = this->head;
+            T* array = new T[this->nodes];
+
+            for(int i = 0; i< this->nodes; i++)
+            {
+                array[i]=listaorigin -> data;
+                listaorigin = listaorigin -> next;
+            }
+            //Se le pasa donde empieza y termina el array
+            std::sort(array, array+this->nodes);
+            listaorigin=this->head;
+
+            for (int i = 0; i < size(); i++)
+            {
+                listaorigin-> data = array[i];
+                listaorigin = listaorigin -> next;
+            }
+
+            delete[] array;
         }
     
         void reverse() {
-            // TODO
+            if (size() <= 1) {
+                return;
+            }
+            Node<T> *Nodeactual = this->head;
+            Node<T> *temporal = NULL;
+            while(Nodeactual!= nullptr)
+            {
+                temporal = Nodeactual->next;
+                Nodeactual -> next = Nodeactual->prev;
+                Nodeactual -> prev = temporal;
+                Nodeactual = temporal;
+            }
+            swap(this->head,this->tail);
         }
 
         string name() {
@@ -129,15 +164,27 @@ class CircularLinkedList : public List<T> {
         }
 
         BidirectionalIterator<T> begin() {
-            // TODO
+            return BidirectionalIterator<T>(this->head);
         }
 
 	    BidirectionalIterator<T> end() {
-            // TODO
+	        return BidirectionalIterator<T> (this->head);
         }
 
         void merge(CircularLinkedList<T> list) {
-            // TODO
+            if (list.empty()){
+                return;
+            }
+            if (size() == 0)
+                return;
+            else
+            {
+                this->tail->next = list.head;
+                list.head->prev = this->tail;
+                this->tail = list.tail;
+                this->tail->next = this->head;
+            }
+            this->nodes = this->nodes+list.nodes;
         }
 };
 
