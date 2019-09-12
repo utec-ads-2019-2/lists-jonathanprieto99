@@ -62,7 +62,18 @@ class CircularLinkedList : public List<T> {
         }
 
         void pop_front() {
-            // TODO
+            if(empty()){
+                this->head=nullptr;
+                this->tail=nullptr;
+            }
+            else{
+                Node<T> *temporal = this->head->next;
+                delete this->head;
+                this->head=temporal;
+                this->head->prev= this->tail;
+                this->tail->next= this->head;
+                --this->nodes;
+            }
         }
 
         void pop_back() {
