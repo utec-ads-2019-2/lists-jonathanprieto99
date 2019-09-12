@@ -77,23 +77,43 @@ class CircularLinkedList : public List<T> {
         }
 
         void pop_back() {
-            // TODO
+            if(this->nodes==0){
+                this->head=nullptr;
+                this->tail=nullptr;
+            }
+            else{
+                Node<T> *temporal =this->tail->prev;
+                delete this->tail;
+                this->tail=temporal;
+                this->head->prev= this->tail;
+                this->tail->next= this->head;
+                --this->nodes;
+            }
         }
 
         T operator[](int index) {
-            // TODO
+            if (index > size()){
+                throw runtime_error("TimeOut");
+            }
+            Node<T> *temporal = this->head;
+            for (int i = 0; i < index; i++)
+                temporal = temporal->next ;
+            return temporal->data ;
         }
 
         bool empty() {
-            // TODO
+            return (this -> nodes == 0);
         }
 
         int size() {
-            // TODO
+            return this->nodes;
         }
 
         void clear() {
-            // TODO
+            this->head->killSelf(this->nodes);
+            this->head = nullptr;
+            this->tail = nullptr;
+            this->nodes=0;
         }
 
         void sort() {
