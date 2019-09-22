@@ -34,6 +34,7 @@ class BidirectionalIterator : public Iterator<T> {
         }
 
         T operator*() {
+                // Falta controlar el caso vacío
                 return this->current->data;
         }
 };

@@ -24,6 +24,7 @@ class ForwardIterator : public Iterator<T> {
         }
 
         T operator*() {
+                // Falta controlar caso vacío
                 return this->current->data;
         }
 };

@@ -28,6 +28,7 @@ class ForwardList : public List<T> {
                 if(empty()){//ES IGUAL A empty()==true
                         this->head=nullptr;
                         this->tail=nullptr;
+                        // Cuándo se inserta?
                 }
                 else{
                         temporal->next=this->head;
@@ -42,6 +43,7 @@ class ForwardList : public List<T> {
                 if(empty()){//ES IGUAL A empty()==true
                         this->head=nullptr;
                         this->tail=nullptr;
+                        // Cuándo se inserta?
                 }
                 else{
                         this->tail-> next= temporal;
@@ -79,6 +81,7 @@ class ForwardList : public List<T> {
         }
 
         T operator[](int index) {
+                // índices negativos?
                 if (index > size())
                         throw runtime_error("Empty list!");
                 auto *temporal = this->head;

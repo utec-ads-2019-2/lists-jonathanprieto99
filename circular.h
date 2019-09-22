@@ -22,6 +22,7 @@ class CircularLinkedList : public List<T> {
         }
 
         T back() {
+            // la circular no debería tener tail
                 if ( empty() ) {
                         throw runtime_error("TimeOut");
                 }
@@ -30,6 +31,7 @@ class CircularLinkedList : public List<T> {
 
         void push_front(T value) {
                 auto *temporal = new Node<T>;
+                // La circular no necesita tail
                 if(this->nodes==0){
                         temporal->next = temporal;
                         temporal->prev = temporal;
@@ -68,6 +70,7 @@ class CircularLinkedList : public List<T> {
 
         void pop_front() {
             if(empty()){
+                // Si es vacío no haces nada
                 this->head=nullptr;
                 this->tail=nullptr;
             }
@@ -85,6 +88,7 @@ class CircularLinkedList : public List<T> {
             if(this->nodes==0){
                 this->head=nullptr;
                 this->tail=nullptr;
+                // Si es vacío no tienes que hacer nada
             }
             else{
                 Node<T> *temporal =this->tail->prev;
@@ -97,6 +101,7 @@ class CircularLinkedList : public List<T> {
         }
 
         T operator[](int index) {
+            // En la circular siempre debería poder ir a la posición
             if (index > size()){
                 throw runtime_error("TimeOut");
             }
@@ -168,6 +173,7 @@ class CircularLinkedList : public List<T> {
         }
 
 	    BidirectionalIterator<T> end() {
+            // Cómo controlas el caso de iterar sin do while?
 	        return BidirectionalIterator<T> (this->head);
         }
 
